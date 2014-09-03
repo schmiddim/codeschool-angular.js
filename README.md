@@ -59,4 +59,28 @@ Immer in Closures (LERNEN) wrappen
 
 	<img src="{{image.thumbail}}"   funktioniert nicht,weil der browser das bild parallel lädt. 
 		->ng-src directive verwenden           <img ng-src="{{product.images[0]}}" />
++++2.6++++
+
+
+2 way databindung
+ng-click directive
+<section ng-init="tab = 1">
+	<ul class="nav nav-pills">
+	<!-- wird ative gesetzt wenn tab =1-->
+		<li ng-class="{ active:tab === 1}"> <a href ng-click="tab = 1">description</a></li>
+		<li> <a href ng-click="tab = 2">specs</a></li>
+		<li> <a href ng-click="tab = 3">reviews</a></li>
+	</ul>
+	{{tab}}<!--wert von tab wird geupdet und ausgegeben -->
+</section>
+
+
+====================
+Panel controller - logik aus dme html ziehen
+Panel Controller
+
+-> ng-controller="PanelController as panel"
+
+
+
 +++Tutorial 3+++
