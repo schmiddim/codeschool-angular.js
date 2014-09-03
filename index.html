@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	</head>
 	<body>
-	
+<div>{{1409762739|date:'MM/dd/yyyy @h:mma'}}</div>
 		<button ng-click="count = count + 1" ng-init="count=0">
 	  		Increment
 		</button>
@@ -16,11 +16,11 @@
 		<p>I am {{6+4}}</p>
 		<!-- templating -->
 		<div ng-controller="StoreController as store">
-			<div ng-repeat="product in store.products">
+			<div ng-repeat="product in store.products| orderBy:'-price'">
 					<div ng-hide="product.soldOut">
 					<!--	<div ng-show="!store.product.soldOut">-->
 							<h1>{{product.name}}</h1>
-							<h2>{{product.price}}</h2>
+							<h2>{{product.price|currency}}</h2>
 							<p>{{product.description}}</p>
 							<button ng-show="product.canPurchase">Add to Cart</button>
 						</div>

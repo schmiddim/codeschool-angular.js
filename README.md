@@ -4,7 +4,7 @@ JS tut javascript road trip Codeschool
 http://campus.codeschool.com/courses/shaping-up-with-angular-js/level/1/section/2/our-first-controllerd
 
 ////////////////////////////////
-Hier hab ich aufgehört http://campus.codeschool.com/courses/shaping-up-with-angular-js/level/2/section/1/video/1
+Hier hab ich aufgehört http://campus.codeschool.com/courses/shaping-up-with-angular-js/level/2/section/2/video/1
 
 +++Tutorial 1+++
 directives - marker on tag
@@ -51,4 +51,12 @@ Immer in Closures (LERNEN) wrappen
 	}
 
 })();
+
++++2.1+++
+			<div ng-repeat="product in store.products| orderBy:'-price'">
+															^
+														foreach order by Minus DESC ohne minus aufsteigend
+
+	<img src="{{image.thumbail}}"   funktioniert nicht,weil der browser das bild parallel lädt. 
+		->ng-src directive verwenden           <img ng-src="{{product.images[0]}}" />
 +++Tutorial 3+++
