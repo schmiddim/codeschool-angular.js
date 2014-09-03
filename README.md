@@ -161,3 +161,36 @@ app.directive('proudctTitle', function(){
 })
  
 ####5.1 dependencies
+
+directives rausziehen - alles mit products nach products.js
+
+neues module store-products
+var app = angular.module('store',[]);
+module store hängt app von store-products:
+<script src="products.js"></script>
+
+var app = angular.module('store', ['store-products']);
+
++5.3 Services+
+Filter fängt immer mit einem $ an - built-in
+
+$http({method: 'GET', url: '/products.json'});
+
+$http.get('/products.json',{}}); // return Promise - jQuery Tutorial gucken
+
+dependency injection
+
+app.controller('SomeController', ['$http', function($http){
+
+	}]);
+	mehrere services
+app.controller('SomeController', ['$http','$log', function($http, $log){
+
+	var store=this;
+
+	store.products = [];	//sollte initialisiert werden, weil die seite ohne request rendert
+	$http.get('/products.json').success(function(data)){
+	//callback hat service context
+	store.products = data;
+}
+	}]);

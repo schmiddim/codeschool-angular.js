@@ -1,3 +1,6 @@
+
+//das ist ein closure - schau dir dás an!
+
 (function() {
   var app = angular.module('gemStore', []);
 
