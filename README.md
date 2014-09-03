@@ -80,7 +80,33 @@ Panel controller - logik aus dme html ziehen
 Panel Controller
 
 -> ng-controller="PanelController as panel"
+	app.controller('PanelController', function(){
+		this.tab=1;
+
+		this.selectTab = function(setTab){
+			this.tab = setTab;
+		}
+
+	});
+
+im tab -> ng-click="panel.selectTab(1)"
 
 
 
 +++Tutorial 3+++
+Form an model binden  2waybinding
+
+<select ng-model="review.stars">
+<option value="1">1 star</option>
+</select>
+<textarea ng-model="review.body"></textarea>
+
+
++++3.5+++
+reviewForm controller - variablen definieren
+immer Ctrl suffix
+
+++++3.8 Validation++++
+Html validierung ausschalten: novalidate
+
+benötigtes: required reintun
