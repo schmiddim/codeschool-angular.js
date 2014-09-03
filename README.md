@@ -194,3 +194,17 @@ app.controller('SomeController', ['$http','$log', function($http, $log){
 	store.products = data;
 }
 	}]);
+
+
+++outro
+links
+
+docs.angular.org -> developer guide
+
+egghead.io  angular screencasts
+thinkster.io 
+
+kapeli.com/dash (reference guide) ?mac
+
+meetup.com -> search angualar
+
