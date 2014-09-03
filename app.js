@@ -4,6 +4,8 @@
 	app.controller('StoreController', function(){
 		this.product = gem;
 		this.products = gems;
+
+
 	});
 	var gem= {
 		name: 'fucki'

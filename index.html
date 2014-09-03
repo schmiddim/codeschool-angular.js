@@ -4,7 +4,13 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	</head>
 	<body>
-
+	
+		<button ng-click="count = count + 1" ng-init="count=0">
+	  		Increment
+		</button>
+		<span>
+		  count: {{count}}
+		</span>
 		<h1>Hello World</h1>
 		<!-- expressions-->
 		<p>I am {{6+4}}</p>
