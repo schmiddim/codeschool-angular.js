@@ -159,5 +159,5 @@ app.directive('proudctTitle', function(){
 	};	
 
 })
-
+ 
 ####5.1 dependencies
