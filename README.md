@@ -110,3 +110,54 @@ immer Ctrl suffix
 Html validierung ausschalten: novalidate
 
 benötigtes: required reintun
+
+{{reviewForm.$valid}}
+
+
++++4++++
+ng-include - html templats einbinden  ng-include="'product-title.html'"
+
+directive schreiben für template
+
+-> die directive
+<product-title></product-title>
+wird so angelegt
+
+app.directive('proudctTitle', function(){
+	return {
+		/********/
+		restrict: 'E', 	//new Html Element
+		templateUrl: 'product-title.html'
+	};	
+
+})
+
+keine self-closing tags - gibt ab und an probleme
+Attribute Directive <h3 product-title></h3>
+app.directive('proudctTitle', function(){
+	return {
+		/********/
+		restrict: 'A', 	//new Html Attribute
+		templateUrl: 'product-title.html'
+	};	
+
+})
+
++++4.5 directive mit  controller
+app.directive('proudctTitle', function(){
+	return {
+		/********/
+		restrict: 'E', 	//new Html Element
+		templateUrl: 'product-title.html'
+		controller:function(){
+				
+				/**********/
+			}, 
+			controllerAs: 'panels'
+	};
+
+	};	
+
+})
+
+####5.1 dependencies
